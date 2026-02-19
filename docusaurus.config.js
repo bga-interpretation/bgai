@@ -93,8 +93,18 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'BGA',
-          }
+            label: 'BGA interpretieren lernen',
+          },
+          {
+            to: '/training',
+            label: 'Über mich',
+            position: 'left',
+          },
+          {
+            href: 'https://derangedphysiology.com/main/home',
+            label: 'Deranged Physiology',
+            position: 'right',
+          },
         ],
       },
       footer: {

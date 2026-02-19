@@ -45,3 +45,19 @@
   white-space: nowrap;        /* rechte Seite nicht umbrechen */
   text-align: right;
 }
+
+.big-text {
+  font-size: 1.2rem;
+}
+
+.small-text {
+  font-size: 0.6rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.markdown p {
+  margin-bottom: 0.5rem;
+}
