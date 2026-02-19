@@ -5,7 +5,7 @@
 | pCO<sub>2</sub> | 32–45 mmHg | 37–50 mmHg |
 | pO<sub>2</sub> | 65–100 mmHg | 36–44 mmHg |
 | **Oxymetrie Ergebnis** | | |
-| ctHb | ♀: 12–15 g/dL, ♂: 13,6–17,2 g/dl |
+| ctHb | ♀: 12–15 g/dl, ♂: 13,6–17,2 g/dl |
 | sO<sub>2</sub> | 99-95% | 80-70% |
 | FO<sub>2</sub>Hb | ? | |
 | FCOHb | ? | |

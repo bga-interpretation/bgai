@@ -2,7 +2,19 @@
 title: Teste dein Wissen
 ---
 
+import React from 'react';
 import ValueCheckList from '@site/src/components/ValueCheckList';
 import { phPractice } from '@site/src/data/phPractice';
 
-<ValueCheckList items={phPractice} />
+export default function Page() {
+  const shuffledItems = React.useMemo(() => {
+    const arr = [...phPractice];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, []);
+
+  return <ValueCheckList items={shuffledItems} />;
+}
