@@ -1,167 +1,87 @@
 ---
-title: 2.2 Teste dein Wissen
+title: 2.2 10 BGA-Übungsfälle
 ---
 
 import BGALernmodul from '@site/src/components/BGALernmodul';
 
-**Normalbereiche (grob):** pH 7,35–7,45 · pCO₂ 32–45 mmHg · HCO₃⁻ 22–26 mmol/L
+**Hinweis:** Werte sind vorgegeben. Du kreuzt nur an: Azidose/Alkalose · respiratorisch/metabolisch · Kompensation ja/nein.
 
 ---
 
 <BGALernmodul
-  title="Fall 1 – Hyperglykämie"
+  title="Fall 1 – 23-jährige Patientin mit Polyurie und Müdigkeit"
   presetValues={{ ph: "7.20", pco2: "28", hco3: "12" }}
-  lockValues={true}
-  solution={{
-    phFlag: "erniedrigt",
-    pco2Flag: "erniedrigt",
-    hco3Flag: "erniedrigt",
-    acidBase: "azidose",
-    primary: "metabolisch",
-    compensation: "partiell",
-  }}
+  solution={{ acidBase: "azidose", primary: "metabolisch", compensation: "ja" }}
 />
 
 <br/>
 
 <BGALernmodul
-  title="Fall 2 – Erbrechen"
+  title="Fall 2 – 45-jährige Patientin mit anhaltendem Erbrechen"
   presetValues={{ ph: "7.52", pco2: "48", hco3: "36" }}
-  lockValues={true}
-  solution={{
-    phFlag: "hoch",
-    pco2Flag: "hoch",
-    hco3Flag: "hoch",
-    acidBase: "alkalose",
-    primary: "metabolisch",
-    compensation: "partiell",
-  }}
+  solution={{ acidBase: "alkalose", primary: "metabolisch", compensation: "ja" }}
 />
 
 <br/>
 
 <BGALernmodul
-  title="Fall 3 – Hypoventilation"
+  title="Fall 3 – 68-jähriger Patient nach Opioid-Überdosierung"
   presetValues={{ ph: "7.28", pco2: "60", hco3: "26" }}
-  lockValues={true}
-  solution={{
-    phFlag: "erniedrigt",
-    pco2Flag: "hoch",
-    hco3Flag: "normal",
-    acidBase: "azidose",
-    primary: "respiratorisch",
-    compensation: "keine",
-  }}
+  solution={{ acidBase: "azidose", primary: "respiratorisch", compensation: "nein" }}
 />
 
 <br/>
 
 <BGALernmodul
-  title="Fall 4 – chronische Hypoventilation"
+  title="Fall 4 – 70-jähriger Patient mit chronischer Lungenerkrankung"
   presetValues={{ ph: "7.36", pco2: "60", hco3: "33" }}
-  lockValues={true}
-  solution={{
-    phFlag: "normal",
-    pco2Flag: "hoch",
-    hco3Flag: "hoch",
-    acidBase: "azidose",
-    primary: "respiratorisch",
-    compensation: "vollstaendig",
-  }}
+  solution={{ acidBase: "azidose", primary: "respiratorisch", compensation: "ja" }}
 />
 
 <br/>
 
 <BGALernmodul
-  title="Fall 5 – Hyperventilation"
+  title="Fall 5 – 22-jährige Patientin mit Panikattacke"
   presetValues={{ ph: "7.55", pco2: "25", hco3: "22" }}
-  lockValues={true}
-  solution={{
-    phFlag: "hoch",
-    pco2Flag: "erniedrigt",
-    hco3Flag: "normal",
-    acidBase: "alkalose",
-    primary: "respiratorisch",
-    compensation: "keine",
-  }}
+  solution={{ acidBase: "alkalose", primary: "respiratorisch", compensation: "nein" }}
 />
 
 <br/>
 
 <BGALernmodul
-  title="Fall 6 – Chronische Hyperventilation"
+  title="Fall 6 – 35-jähriger Bergsteiger auf 3500 m Höhe"
   presetValues={{ ph: "7.47", pco2: "30", hco3: "20" }}
-  lockValues={true}
-  solution={{
-    phFlag: "hoch",
-    pco2Flag: "erniedrigt",
-    hco3Flag: "erniedrigt",
-    acidBase: "alkalose",
-    primary: "respiratorisch",
-    compensation: "partiell",
-  }}
+  solution={{ acidBase: "alkalose", primary: "respiratorisch", compensation: "ja" }}
 />
 
 <br/>
 
 <BGALernmodul
-  title="Fall 7 – Sepsis"
-  presetValues={{ ph: "7.25", pco2: "26", hco3: "12" }}
-  lockValues={true}
-  solution={{
-    phFlag: "erniedrigt",
-    pco2Flag: "erniedrigt",
-    hco3Flag: "erniedrigt",
-    acidBase: "azidose",
-    primary: "metabolisch",
-    compensation: "partiell",
-  }}
-/>
-
-<br/>
-
-<BGALernmodul
-  title="Fall 8 – Diuretikaabusus"
-  presetValues={{ ph: "7.49", pco2: "52", hco3: "38" }}
-  lockValues={true}
-  solution={{
-    phFlag: "hoch",
-    pco2Flag: "hoch",
-    hco3Flag: "hoch",
-    acidBase: "alkalose",
-    primary: "metabolisch",
-    compensation: "partiell",
-  }}
-/>
-
-<br/>
-
-<BGALernmodul
-  title="Fall 9 – Laktat"
+  title="Fall 7 – 60-jährige Patientin mit septischem Schock"
   presetValues={{ ph: "7.30", pco2: "30", hco3: "14" }}
-  lockValues={true}
-  solution={{
-    phFlag: "erniedrigt",
-    pco2Flag: "erniedrigt",
-    hco3Flag: "erniedrigt",
-    acidBase: "azidose",
-    primary: "metabolisch",
-    compensation: "partiell",
-  }}
+  solution={{ acidBase: "azidose", primary: "metabolisch", compensation: "ja" }}
 />
 
 <br/>
 
 <BGALernmodul
-  title="Fall 10 – Nierenversagen"
+  title="Fall 8 – 72-jähriger Patient unter Diuretikatherapie"
+  presetValues={{ ph: "7.50", pco2: "50", hco3: "37" }}
+  solution={{ acidBase: "alkalose", primary: "metabolisch", compensation: "ja" }}
+/>
+
+<br/>
+
+<BGALernmodul
+  title="Fall 9 – 55-jähriger Patient mit akuter Ateminsuffizienz"
+  presetValues={{ ph: "7.22", pco2: "70", hco3: "27" }}
+  solution={{ acidBase: "azidose", primary: "respiratorisch", compensation: "nein" }}
+/>
+
+<br/>
+
+<BGALernmodul
+  title="Fall 10 – 63-jährige Patientin mit chronischer Niereninsuffizienz"
   presetValues={{ ph: "7.18", pco2: "22", hco3: "8" }}
-  lockValues={true}
-  solution={{
-    phFlag: "erniedrigt",
-    pco2Flag: "erniedrigt",
-    hco3Flag: "erniedrigt",
-    acidBase: "azidose",
-    primary: "metabolisch",
-    compensation: "partiell",
-  }}
+  solution={{ acidBase: "azidose", primary: "metabolisch", compensation: "ja" }}
 />
