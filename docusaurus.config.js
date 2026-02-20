@@ -96,6 +96,11 @@ const config = {
             label: 'BGA interpretieren lernen',
           },
           {
+            to: '/uebermich',
+            label: 'Über mich',
+            position: 'right',
+          },
+          {
             href: 'https://derangedphysiology.com/main/home',
             label: 'Deranged Physiology',
             position: 'right',
