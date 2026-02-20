@@ -1,0 +1,167 @@
+---
+title: 2.2 Teste dein Wissen
+---
+
+import BGALernmodul from '@site/src/components/BGALernmodul';
+
+**Normalbereiche (grob):** pH 7,35–7,45 · pCO₂ 32–45 mmHg · HCO₃⁻ 22–26 mmol/L
+
+---
+
+<BGALernmodul
+  title="Fall 1 – Hyperglykämie"
+  presetValues={{ ph: "7.20", pco2: "28", hco3: "12" }}
+  lockValues={true}
+  solution={{
+    phFlag: "erniedrigt",
+    pco2Flag: "erniedrigt",
+    hco3Flag: "erniedrigt",
+    acidBase: "azidose",
+    primary: "metabolisch",
+    compensation: "partiell",
+  }}
+/>
+
+<br/>
+
+<BGALernmodul
+  title="Fall 2 – Erbrechen"
+  presetValues={{ ph: "7.52", pco2: "48", hco3: "36" }}
+  lockValues={true}
+  solution={{
+    phFlag: "hoch",
+    pco2Flag: "hoch",
+    hco3Flag: "hoch",
+    acidBase: "alkalose",
+    primary: "metabolisch",
+    compensation: "partiell",
+  }}
+/>
+
+<br/>
+
+<BGALernmodul
+  title="Fall 3 – Hypoventilation"
+  presetValues={{ ph: "7.28", pco2: "60", hco3: "26" }}
+  lockValues={true}
+  solution={{
+    phFlag: "erniedrigt",
+    pco2Flag: "hoch",
+    hco3Flag: "normal",
+    acidBase: "azidose",
+    primary: "respiratorisch",
+    compensation: "keine",
+  }}
+/>
+
+<br/>
+
+<BGALernmodul
+  title="Fall 4 – chronische Hypoventilation"
+  presetValues={{ ph: "7.36", pco2: "60", hco3: "33" }}
+  lockValues={true}
+  solution={{
+    phFlag: "normal",
+    pco2Flag: "hoch",
+    hco3Flag: "hoch",
+    acidBase: "azidose",
+    primary: "respiratorisch",
+    compensation: "vollstaendig",
+  }}
+/>
+
+<br/>
+
+<BGALernmodul
+  title="Fall 5 – Hyperventilation"
+  presetValues={{ ph: "7.55", pco2: "25", hco3: "22" }}
+  lockValues={true}
+  solution={{
+    phFlag: "hoch",
+    pco2Flag: "erniedrigt",
+    hco3Flag: "normal",
+    acidBase: "alkalose",
+    primary: "respiratorisch",
+    compensation: "keine",
+  }}
+/>
+
+<br/>
+
+<BGALernmodul
+  title="Fall 6 – Chronische Hyperventilation"
+  presetValues={{ ph: "7.47", pco2: "30", hco3: "20" }}
+  lockValues={true}
+  solution={{
+    phFlag: "hoch",
+    pco2Flag: "erniedrigt",
+    hco3Flag: "erniedrigt",
+    acidBase: "alkalose",
+    primary: "respiratorisch",
+    compensation: "partiell",
+  }}
+/>
+
+<br/>
+
+<BGALernmodul
+  title="Fall 7 – Sepsis"
+  presetValues={{ ph: "7.25", pco2: "26", hco3: "12" }}
+  lockValues={true}
+  solution={{
+    phFlag: "erniedrigt",
+    pco2Flag: "erniedrigt",
+    hco3Flag: "erniedrigt",
+    acidBase: "azidose",
+    primary: "metabolisch",
+    compensation: "partiell",
+  }}
+/>
+
+<br/>
+
+<BGALernmodul
+  title="Fall 8 – Diuretikaabusus"
+  presetValues={{ ph: "7.49", pco2: "52", hco3: "38" }}
+  lockValues={true}
+  solution={{
+    phFlag: "hoch",
+    pco2Flag: "hoch",
+    hco3Flag: "hoch",
+    acidBase: "alkalose",
+    primary: "metabolisch",
+    compensation: "partiell",
+  }}
+/>
+
+<br/>
+
+<BGALernmodul
+  title="Fall 9 – Laktat"
+  presetValues={{ ph: "7.30", pco2: "30", hco3: "14" }}
+  lockValues={true}
+  solution={{
+    phFlag: "erniedrigt",
+    pco2Flag: "erniedrigt",
+    hco3Flag: "erniedrigt",
+    acidBase: "azidose",
+    primary: "metabolisch",
+    compensation: "partiell",
+  }}
+/>
+
+<br/>
+
+<BGALernmodul
+  title="Fall 10 – Nierenversagen"
+  presetValues={{ ph: "7.18", pco2: "22", hco3: "8" }}
+  lockValues={true}
+  solution={{
+    phFlag: "erniedrigt",
+    pco2Flag: "erniedrigt",
+    hco3Flag: "erniedrigt",
+    acidBase: "azidose",
+    primary: "metabolisch",
+    compensation: "partiell",
+  }}
+/>
