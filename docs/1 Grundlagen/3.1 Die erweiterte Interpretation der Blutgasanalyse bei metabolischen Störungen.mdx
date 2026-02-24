@@ -1,17 +1,24 @@
+import WinterInline from '@site/src/components/WinterInline';
+import AlkaloseInline from '@site/src/components/AlkaloseInline';
+
+
 ## Metabolische Azidose ##
 
 **1** Beurteilung des Kompensationsstatus  
 Formel: berechnetes pCO<sub>2</sub> = (1,5 x HCO<sub>3</sub><sup>-</sup>) + 8  
 Faustregel: ca. letzten 2 Ziffern des ph-Werts  
-&ndash; gemessenes pCO<sub>2</sub> +/- 2 berechnetes pCO<sub>2</sub> → **adäquate Kompensation**  
-&ndash; gemessenes pCO<sub>2</sub> >2 berechnetes pCO<sub>2</sub> → **zusätzliche respiratorische Azidose (Hypoventilation)**  
-&ndash; gemessenes pCO<sub>2</sub> &lt;2 berechnetes pCO<sub>2</sub> → **zusätzliche respiratorische Alkalose (Hyperventiliation) oder metabolische Alkalose**
+
+<WinterInline /> mmHg
+
+&ndash; gemessenes pCO<sub>2</sub> +/- 2 berechnetes pCO<sub>2</sub> → **adäquate Kompensation**, X berücksichtigen, weiter mit 2  
+&ndash; gemessenes pCO<sub>2</sub> >2 berechnetes pCO<sub>2</sub> → **zusätzliche respiratorische Azidose (Hypoventilation)**, Y berücksichtigen, weiter mit 2  
+&ndash; gemessenes pCO<sub>2</sub> &lt;2 berechnetes pCO<sub>2</sub> → **zusätzliche respiratorische Alkalose (Hyperventiliation) oder metabolische Alkalose**, Z berücksichtigen, weiter mit 2
 
 **2** Berechnung der Anionenlücke  
 Formel: Na<sup>+</sup> - (HCO<sub>3</sub><sup>-</sup> + Cl<sup>-</sup>) bzw. mit Berücksichtigung von K<sup>+</sup>: (Na<sup>+</sup> + K<sup>+</sup>) - (HCO<sub>3</sub><sup>-</sup> + Cl<sup>-</sup>)  
 Störfaktoren: Hypalbuminämie => Verringerung der Anionenlücke, Hyperphosphatämie => Vergrößerung der Anionenlücke  
-&ndash; Anionenlücke > 7 +/- 4 mmol/l bzw. mit Berücksichtigung von K<sup>+</sup>: > 11 +/- 4 mmol/l → **Additionsazidose**  
-&ndash; Anionenlücke 7 +/- 4 mmol bzw. mit Berücksichtigung von K<sup>+</sup>: 11 +/- 4 mmol/l → **Subtraktionsazidose**
+&ndash; Anionenlücke > 7 +/- 4 mmol/l bzw. mit Berücksichtigung von K<sup>+</sup>: > 11 +/- 4 mmol/l → **Additionsazidose, weiter mit 3**  
+&ndash; Anionenlücke 7 +/- 4 mmol bzw. mit Berücksichtigung von K<sup>+</sup>: 11 +/- 4 mmol/l → **Subtraktionsazidose, weiter mit 5**
 
 **3** Berechnung der Deltalücke  
 Formel: (Anionenlücke - 11) / (24 - HCO<sub>3</sub><sup>-</sup>)  
@@ -31,8 +38,11 @@ Verschiedene Formeln, z.B. Smithline-Gardner-Formel: berechnete Plasmaosmolarit�
 
 ## Metabolische Alkalose ##
 **1** Beurteilung des Kompensationsstatus  
-Formel: (0,7 x HCO<sub>3</sub><sup>-</sup>) + 20  
+Formel: berechnetes pCO<sub>2</sub> = (0,7 x HCO<sub>3</sub><sup>-</sup>) + 20  
 Faustregel: 0,7 mmHg PaCO<sub>2</sub> pro mmol/l HCO<sub>3</sub><sup>-</sup> ↑  
+
+<AlkaloseInline /> mmHg
+
 &ndash; gemessen +/- 5 berechnet → **adäquate Kompensation**  
 &ndash; gemessen >5 berechnet → **zusätzliche respiratorische Azidose oder metabolische Azidose**  
 &ndash; gemessen &lt;5 berechnet → **zusätzliche respiratorische Alkalose**

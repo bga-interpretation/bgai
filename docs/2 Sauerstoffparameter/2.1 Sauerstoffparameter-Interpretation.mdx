@@ -1,0 +1,33 @@
+import AAInline from '@site/src/components/AAInline';
+import PFInline from '@site/src/components/PFInline';
+
+**1** Patient unter Sauerstofftherapie → **2**  
+– Patient ohne Sauerstofftherapie → **3**
+
+**2** PaO<sub>2</sub>/FiO<sub>2</sub>-Verhältnis berechnen  
+Formel: PaO<sub>2</sub> / FiO<sub>2</sub>  
+wobei gilt: FiO<sub>2</sub> = 21 + 4 x l/min O<sub>2</sub>
+
+<PFInline /> 
+
+– &lt;3 → **relevante Hypoxie, 3**  
+– >3 → **wahrscheinlich (!) keine Hypoxie**
+
+**3** pO<sub>2</sub> < 65 + pCO<sub>2</sub> normal → **respiratorische Insuffizienz Typ 1: Gasaustauschproblem (Lunge und nachgeschaltete Systeme), wenn Ursache unklar 4 hinzuziehen**  
+– pO2 < 65 + pCO<sub>2</sub> > 45 → **respiratorische Insuffizienz Typ 2: Ventilationsproblem (Atemmechanik), wenn Ursache unklar 4 hinzuziehen**
+
+**4** A-a-Gradient berechnen  
+Formel: PAO<sub>2</sub> - PaO<sub>2</sub>  
+wobei gilt: PAO<sub>2</sub> = PiO<sub>2</sub> - (PaCO<sub>2</sub> : RQ**)  
+und: PiO<sub>2</sub> = [Atmosphärendruck (760 mmHg) – Wasserdampfdruck der Atemwege (47 mmHg)] x FiO<sub>2</sub>  
+<span className="small-text">**RQ… respiratory quotient, ernährungsabhängig (kohlenhydratreich 1; fettreich 0,7; für praktische Belange 0,8), wenn FiO2 > 60% dann RQ nicht verwenden! Der folgende Rechner verwendet RQ = 0,8.</span>  
+
+<AAInline /> mmHg
+
+– < 23,5 mmHg → **Höhe, Lunge**  
+– > 23,5 mmHg → **Neuromuskulär**
+
+**5** Schweregrad einschätzen  
+– pH < 7,2 → **Intubation erwägen**  
+– PaCO<sub>2</sub> > 60 mmHg → **ventilatorische Unterstützung**  
+– PaO<sub>2</sub> &lt; 60 mmHg trotz O<sub>2</sub> → **NIV/Intubation**
