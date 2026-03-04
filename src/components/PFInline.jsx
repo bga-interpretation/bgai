@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 
 export default function PFInline({
-  decimals = 0,
+  decimals = 2,
   w = 60,
 }) {
   const [paO2, setPaO2] = useState("");
@@ -16,10 +16,8 @@ export default function PFInline({
     }
 
     // FiO2 in Prozent
-    const fiO2_percent = 21 + 4 * l;
+    const fiO2 = 21 + 4 * l;
 
-    // Umrechnung in Fraktion
-    const fiO2 = fiO2_percent / 100;
 
     if (fiO2 <= 0) return "";
 

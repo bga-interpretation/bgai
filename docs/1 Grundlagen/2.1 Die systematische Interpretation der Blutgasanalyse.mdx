@@ -1,10 +1,44 @@
-**1** Vermeiden von Fehlerquellen  
-&ndash; Zuordnung der Probe: Patientenidentität, Art der Probe (arteriell, kapillär, venös)  
-&ndash; Plausibilität der gemessenen Werte: Vergleich mit Klinik, Hinweise auf Dilution, Sauerstoffzufuhr?
+## Vermeiden von Fehlerquellen ##  
+**1** Zuordnung der Probe: Patientenidentität, Art der Probe (arteriell, kapillär, venös) → **2**  
+**2** Plausibilität der gemessenen Werte: Vergleich mit Klinik, Hinweise auf Dilution, Sauerstoffzufuhr?
 
-**2** Beurteilung der Oxygenierung
+## Beurteilung der Oxygenierung ##
+import AAInline from '@site/src/components/AAInline';
+import PFInline from '@site/src/components/PFInline';
 
-**3** Beurteilung des pH-Werts und des respiratorischen/metabolischen Systems
+**1** Patient unter Sauerstofftherapie → **2**  
+– Patient ohne Sauerstofftherapie → **3**
+
+**2** PaO<sub>2</sub>/FiO<sub>2</sub>-Verhältnis berechnen  
+Formel: PaO<sub>2</sub> / FiO<sub>2</sub>  
+wobei gilt: FiO<sub>2</sub> = 21 + 4 x l/min O<sub>2</sub>
+
+<PFInline /> 
+
+– &lt;3 → **relevante Hypoxie, 3**  
+– >3 → **wahrscheinlich (!) keine Hypoxie**
+
+**3** pO<sub>2</sub> >65 → **ausreichende Oxygenierung, weiter mit "Beurteilung des pH-Werts und des respiratorischen/metabolischen Systems"**
+– pO<sub>2</sub> < 65 + pCO<sub>2</sub> normal → **respiratorische Insuffizienz Typ 1: Gasaustauschproblem (Lunge und nachgeschaltete Systeme), wenn Ursache unklar 4 hinzuziehen**  
+– pO2 < 65 + pCO<sub>2</sub> > 45 → **respiratorische Insuffizienz Typ 2: Ventilationsproblem (Atemmechanik), wenn Ursache unklar 4 hinzuziehen**
+
+**4** A-a-Gradient berechnen  
+Formel: PAO<sub>2</sub> - PaO<sub>2</sub>  
+wobei gilt: PAO<sub>2</sub> = PiO<sub>2</sub> - (PaCO<sub>2</sub> : RQ**)  
+und: PiO<sub>2</sub> = [Atmosphärendruck (760 mmHg) – Wasserdampfdruck der Atemwege (47 mmHg)] x FiO<sub>2</sub>  
+<span className="small-text">**RQ… respiratory quotient, ernährungsabhängig (kohlenhydratreich 1; fettreich 0,7; für praktische Belange 0,8), wenn FiO2 > 60% dann RQ nicht verwenden! Der folgende Rechner verwendet RQ = 0,8.</span>  
+
+<AAInline /> mmHg
+
+– < 23,5 mmHg → **Höhe, Lunge**  
+– > 23,5 mmHg → **Neuromuskulär**
+
+**5** Schweregrad einschätzen  
+– pH < 7,2 → **Intubation erwägen**  
+– PaCO<sub>2</sub> > 60 mmHg → **ventilatorische Unterstützung**  
+– PaO<sub>2</sub> &lt; 60 mmHg trotz O<sub>2</sub> → **NIV/Intubation**
+
+## Beurteilung des pH-Werts und des respiratorischen/metabolischen Systems ##
 
 <p>
 <span className="small-text">Merkhilfe:</span>  
@@ -34,16 +68,66 @@
 <div class="center"><span style={{ color: "red" }}>Azidose</span> ← &ndash;2 bis +3 → <span style={{ color: "blue" }}>Alkalose</span></div>
 
 
-&ndash; pH &lt; 7,35 → **Azidose, A**  
-&ndash; pH > 7,45 → **Alkalose, A**  
-&ndash; pH 7,35 &ndash; 7,45 → **möglicherweise normal, aber A erwägen**
+**1** pH &lt; 7,35 → **Azidose, 2**  
+&ndash; pH > 7,45 → **Alkalose, 2**  
+&ndash; pH 7,35 &ndash; 7,45 → **möglicherweise normal, aber 2 erwägen**
 
-**A** Der Wert (des respiratorischen oder metabolischen Systems), der in Richtung des pH-Werts entgleist, bestimmt die Art der Störung, also: → **„respiratorische“ oder „metabolische“ Azidose oder Alkalose, weiter mit B**  
+**2** Der Wert (des respiratorischen oder metabolischen Systems), der in Richtung des pH-Werts entgleist, bestimmt die Art der Störung, also: → **„respiratorische“ oder „metabolische“ Azidose oder Alkalose, weiter mit 3**  
 <span className="small-text">[Merkspruch für typisches Muster: „Metabolisch = Miteinander“, Bsp.: Bei einer metabolischen Azidose sind pH, pCO2, HCO3- und BE erniedrigt.]</span>
 
-**B** Der zweite Wert entgleist in Richtung des pH-Werts → **„kombiniert“**  
+**3** Der zweite Wert entgleist in Richtung des pH-Werts → **„kombiniert“**  
 &ndash; Der zweite Wert entgleist in die Gegenrichtung des pH-Werts → **respiratorische“ oder „metabolische“ Kompensation**
 
-**4** Beurteilung des Kompensationsstatus
+## Die erweiterte Interpretation bei metabolischen Störungen ##
 
-**5** Beurteilung weiterer Parameter: Elektrolyte, Glucose, Lactat, Hämoglobin, Carboxyhämoglobin
+import WinterInline from '@site/src/components/WinterInline';
+import AlkaloseInline from '@site/src/components/AlkaloseInline';
+
+
+### Metabolische Azidose ###
+
+**1** Beurteilung des Kompensationsstatus  
+Formel: berechnetes pCO<sub>2</sub> = (1,5 x HCO<sub>3</sub><sup>-</sup>) + 8  
+Faustregel: ca. letzten 2 Ziffern des ph-Werts  
+
+<WinterInline /> mmHg
+
+&ndash; gemessenes pCO<sub>2</sub> +/- 2 berechnetes pCO<sub>2</sub> → **adäquate Kompensation**, X berücksichtigen, weiter mit 2  
+&ndash; gemessenes pCO<sub>2</sub> >2 berechnetes pCO<sub>2</sub> → **zusätzliche respiratorische Azidose (Hypoventilation)**, Y berücksichtigen, weiter mit 2  
+&ndash; gemessenes pCO<sub>2</sub> &lt;2 berechnetes pCO<sub>2</sub> → **zusätzliche respiratorische Alkalose (Hyperventiliation) oder metabolische Alkalose**, Z berücksichtigen, weiter mit 2
+
+**2** Berechnung der Anionenlücke  
+Formel: Na<sup>+</sup> - (HCO<sub>3</sub><sup>-</sup> + Cl<sup>-</sup>) bzw. mit Berücksichtigung von K<sup>+</sup>: (Na<sup>+</sup> + K<sup>+</sup>) - (HCO<sub>3</sub><sup>-</sup> + Cl<sup>-</sup>)  
+Störfaktoren: Hypalbuminämie => Verringerung der Anionenlücke, Hyperphosphatämie => Vergrößerung der Anionenlücke  
+&ndash; Anionenlücke > 7 +/- 4 mmol/l bzw. mit Berücksichtigung von K<sup>+</sup>: > 11 +/- 4 mmol/l → **Additionsazidose, weiter mit 3**  
+&ndash; Anionenlücke 7 +/- 4 mmol bzw. mit Berücksichtigung von K<sup>+</sup>: 11 +/- 4 mmol/l → **Subtraktionsazidose, weiter mit 5**
+
+**3** Berechnung der Deltalücke  
+Formel: (Anionenlücke - 11) / (24 - HCO<sub>3</sub><sup>-</sup>)  
+&ndash; Deltalücke 0,4-0,8 → **zusätzliche (hyperchlorämische) metabolische Azidose mit normaler Anionenlücke**  
+&ndash; Deltalücke > 1 → **reine metabolische Azidose mit erhöhter Anionenlücke**  
+&ndash; Deltalücke > 2 → **zusätzliche metabolische Alkalose oder vorbestehendes erhöhtes HCO<sub>3</sub><sup>-</sup>**
+
+**4** Berechnung der osmolaren Lücke  
+Verschiedene Formeln, z.B. Smithline-Gardner-Formel: berechnete Plasmaosmolarität = 2 × Na<sup>+</sup> + Glukose + Harnstoff  
+&ndash; gemessene Plasmaosmolarität >5 geschätzte Plasmaosmolarität → **Anionenlücke mit erhöhter osmolaren Lücke**  
+&ndash; gemessene Plasmaosmolarität &lt;5 geschätzte Plasmaosmolarität → **Anionenlücke mit normaler osmolaren Lücke**
+
+**5** Berechnung der Harnanionenlücke  
+?  
+&ndash; ?  
+&ndash; ?
+
+### Metabolische Alkalose ###
+**1** Beurteilung des Kompensationsstatus  
+Formel: berechnetes pCO<sub>2</sub> = (0,7 x HCO<sub>3</sub><sup>-</sup>) + 20  
+Faustregel: 0,7 mmHg PaCO<sub>2</sub> pro mmol/l HCO<sub>3</sub><sup>-</sup> ↑  
+
+<AlkaloseInline /> mmHg
+
+&ndash; gemessen +/- 5 berechnet → **adäquate Kompensation**  
+&ndash; gemessen >5 berechnet → **zusätzliche respiratorische Azidose oder metabolische Azidose**  
+&ndash; gemessen &lt;5 berechnet → **zusätzliche respiratorische Alkalose**
+
+
+## Beurteilung weiterer Parameter: Elektrolyte, Glucose, Lactat, Hämoglobin, Carboxyhämoglobin ##
