@@ -99,24 +99,65 @@ Faustregel: ca. letzten 2 Ziffern des ph-Werts
 **2** Berechnung der Anionenlücke  
 Formel: Na<sup>+</sup> - (HCO<sub>3</sub><sup>-</sup> + Cl<sup>-</sup>) bzw. mit Berücksichtigung von K<sup>+</sup>: (Na<sup>+</sup> + K<sup>+</sup>) - (HCO<sub>3</sub><sup>-</sup> + Cl<sup>-</sup>)  
 Störfaktoren: Hypalbuminämie => Verringerung der Anionenlücke, Hyperphosphatämie => Vergrößerung der Anionenlücke  
-&ndash; Anionenlücke > 7 +/- 4 mmol/l bzw. mit Berücksichtigung von K<sup>+</sup>: > 11 +/- 4 mmol/l → **Additionsazidose, weiter mit 3**  
+
+
+
+import { AnionGapProvider, AnionGapInline, DeltaGapOutput } from '@site/src/components/AnionGapStore';
+
+<AnionGapProvider>
+
+<AnionGapInline /> mmol/L.
+
+
+
+&ndash; Anionenlücke > 7 +/- 4 mmol/l bzw. mit Berücksichtigung von K<sup>+</sup>: > 11 +/- 4 mmol/l → **Additionsazidose, KUSSMAUL in Betracht ziehen
+(K: Ketonkörper, U: Urämie, S: ASS, S: =, M: Methanol, A: Ethanol, U: =, L: Lactat) und weiter mit Deltalücke, 3**  
 &ndash; Anionenlücke 7 +/- 4 mmol bzw. mit Berücksichtigung von K<sup>+</sup>: 11 +/- 4 mmol/l → **Subtraktionsazidose, weiter mit 5**
 
 **3** Berechnung der Deltalücke  
 Formel: (Anionenlücke - 11) / (24 - HCO<sub>3</sub><sup>-</sup>)  
-&ndash; Deltalücke 0,4-0,8 → **zusätzliche (hyperchlorämische) metabolische Azidose mit normaler Anionenlücke**  
-&ndash; Deltalücke > 1 → **reine metabolische Azidose mit erhöhter Anionenlücke**  
-&ndash; Deltalücke > 2 → **zusätzliche metabolische Alkalose oder vorbestehendes erhöhtes HCO<sub>3</sub><sup>-</sup>**
+
+
+
+<DeltaGapOutput />
+
+</AnionGapProvider>
+
+
+
+&ndash; Deltalücke 0,4-0,8 → **zusätzliche (hyperchlorämische) metabolische Azidose mit normaler Anionenlücke**, beispielsweise HCO3--Verlust über Niere oder Darm, weiter mit osmolarer Lücke, **4**  
+&ndash; Deltalücke > 1 → **reine metabolische Azidose mit erhöhter Anionenlücke**, beispielsweise durch Laktatazidose (typischerweise 1,6) oder diabetische Ketoazidose (typischerweise 1,1), weiter mit osmotischer Lücke, **4**  
+&ndash; Deltalücke > 2 → **zusätzliche metabolische Alkalose oder vorbestehendes erhöhtes HCO<sub>3</sub><sup>-</sup>**-, beispielsweise bei Volumenmangel oder Erbrechen, weiter mit osmotischer Lücke, **4**  
 
 **4** Berechnung der osmolaren Lücke  
 Verschiedene Formeln, z.B. Smithline-Gardner-Formel: berechnete Plasmaosmolarität = 2 × Na<sup>+</sup> + Glukose + Harnstoff  
-&ndash; gemessene Plasmaosmolarität >5 geschätzte Plasmaosmolarität → **Anionenlücke mit erhöhter osmolaren Lücke**  
-&ndash; gemessene Plasmaosmolarität &lt;5 geschätzte Plasmaosmolarität → **Anionenlücke mit normaler osmolaren Lücke**
+&ndash; gemessene Plasmaosmolarität >5 geschätzte Plasmaosmolarität → **Anionenlücke mit erhöhter osmolaren Lücke**, diabetische Ketoazidose, Nierenversagen, Laktatazidose  
+&ndash; gemessene Plasmaosmolarität &lt;5 geschätzte Plasmaosmolarität → **Anionenlücke mit normaler osmolaren Lücke**, Vergiftung: Methanol, Ethanol, Ethylenglykol, Azeton, Propylenglykol, Isopropylalkohol, etc.
 
-**5** Berechnung der Harnanionenlücke  
-?  
-&ndash; ?  
-&ndash; ?
+**5** offensichtliche Ursache → siehe Liste:  
+1. Bikarbonatverlust über den GI-Trakt: Diarrhoe, externe Pankreas- oder Dünndarmdrainage/-fistel, Harnleiterableitung (Ureterosigmoidostomie, jejunale Schlinge, ileale Schlinge)  
+(Urin ist chloridreich, Cl- wird im Darm gegen HCO3- getauscht)  
+2. Verdünnungsazidose bei NaCl-Zufuhr, Erythrozytenkonzentrate (Citrat, längere Lagerung)  
+3. Renal tubuläre Azidose [...]  
+4. Iatrogen: Ammoniumchlorid in Hustensaft, Lysinhydrochlorid und Argininhydrochlorid bei parenteraler Ernährung  
+5. Medikamente (Calciumchlorid => azidifizierendes Mittel, Magnesiumsulfat => verursacht Diarrhoe, Cholestyramin => bei Gallensäure-bedingter Diarrhoe)  
+
+– keine offensichtliche Ursache → **Harnanionenlücke erheben, weiter mit 6**
+
+**6** Harnanionenlücke: Achtung - andere negativ geladene Ione (Ketone) können die Harnanionenlücke fälschlich erniedrigen. Eine Volumendepletion kann zu einer falsch-positiven Harnanionenlücke führen. Deshalb nicht erheben, wenn die Diagnose offensichtlich ist!
+– negativ → **systemische, nicht-renale Azidose ohne Anionenlücke**, bespielsweise durch schweren Durchfall
+– Harnanionenlücke positiv → **renal tubuläre Azidose**, [...]
+
+
+
+
+
+
+
+
+
+
+
 
 ### Metabolische Alkalose ###
 **1** Beurteilung des Kompensationsstatus  
